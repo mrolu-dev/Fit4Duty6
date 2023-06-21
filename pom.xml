@@ -1,11 +1,49 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<groupId>com.mt</groupId>
+	<artifactId>Fit4Duty</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1</version>
 
+	<name>Fit4Duty</name>
     <!-- ... -->
 
     <build>
+	<finalName>Fit4Duty</finalName>
         <plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.3</version>
+			<configuration>
+				<source>${jdk.version}</source>
+				<target>${jdk.version}</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-maven-plugin</artifactId>
+			<version>9.2.11.v20150529</version>
+			<configuration>
+				<scanIntervalSeconds>10</scanIntervalSeconds>
+				<webApp>
+					<contextPath>/Fit4Duty</contextPath>
+				</webApp>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-eclipse-plugin</artifactId>
+			<version>2.9</version>
+			<configuration>
+				<downloadSources>true</downloadSources>
+				<downloadJavadocs>true</downloadJavadocs>
+				<wtpversion>2.0</wtpversion>
+				<wtpContextName>Fit4Duty</wtpContextName>
+			</configuration>
+		</plugin>
             <!-- ... -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
@@ -24,8 +62,15 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <!-- Configure SonarQube server URL -->
-                <sonar.host.url>http://localhost:9000</sonar.host.url>
+                <jdk.version>1.8</jdk.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http:localhost:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
             </properties>
         </profile>
     </profiles>
