@@ -4,7 +4,7 @@
 	 <modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>fit4Duty</artifactId>
+	<artifactId>fit4duty</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1</version>
 
