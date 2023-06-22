@@ -4,11 +4,11 @@
 	 <modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.mt</groupId>
-	<artifactId>Fit4Duty</artifactId>
+	<artifactId>fit4Duty</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1</version>
 
-	<name>Fit4Duty</name>
+	<name>fit4Duty</name>
 
 	<description>Fit for Duty Java Web Project</description>
 
@@ -111,7 +111,7 @@
 	</distributionManagement>
 
     <build>
-	<finalName>Fit4Duty</finalName>
+	<finalName>fit4Duty</finalName>
         <plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -129,7 +129,7 @@
 			<configuration>
 				<scanIntervalSeconds>10</scanIntervalSeconds>
 				<webApp>
-					<contextPath>/Fit4Duty</contextPath>
+					<contextPath>/fit4Duty</contextPath>
 				</webApp>
 			</configuration>
 		</plugin>
@@ -141,7 +141,7 @@
 				<downloadSources>true</downloadSources>
 				<downloadJavadocs>true</downloadJavadocs>
 				<wtpversion>2.0</wtpversion>
-				<wtpContextName>Fit4Duty</wtpContextName>
+				<wtpContextName>fit4Duty</wtpContextName>
 			</configuration>
 		</plugin>
             <!-- ... 
