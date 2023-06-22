@@ -8,23 +8,14 @@ public class FitForDutyApp {
         System.out.println("-----------------------");
         System.out.println("Please select the options for the following factors:");
         
-        // Physical Symptoms
+        // Prompt and select options for each factor
         int physicalSymptoms = selectOption("Physical Symptoms", "None", "Mild", "Moderate", "Severe", scanner);
-        
-        // Cognitive Function
         int cognitiveFunction = selectOption("Cognitive Function", "Normal", "Slight impairment", "Moderate impairment", "Significant impairment", scanner);
-        
-        // Emotional State
         int emotionalState = selectOption("Emotional State", "Positive", "Neutral", "Negative", scanner);
-        
-        // Workload Responsibilities
         int workloadResponsibilities = selectOption("Workload Responsibilities", "Low", "Moderate", "High", scanner);
-        
-        // Environmental Factors
         int environmentalFactors = selectOption("Environmental Factors", "Favorable", "Neutral", "Unfavorable", scanner);
-        
-        // Personal Factors
         int personalFactors = selectOption("Personal Factors", "Positive", "Neutral", "Negative", scanner);
+
         scanner.close();
         
         // Calculate fatigue and stress
