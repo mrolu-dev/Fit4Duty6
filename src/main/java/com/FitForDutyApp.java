@@ -9,12 +9,12 @@ public class FitForDutyApp {
         System.out.println("Please select the options for the following factors:");
         
         // Prompt and select options for each factor
-        int physicalSymptoms = selectOption("Physical Symptoms", "None", "Mild", "Moderate", "Severe", scanner);
-        int cognitiveFunction = selectOption("Cognitive Function", "Normal", "Slight impairment", "Moderate impairment", "Significant impairment", scanner);
-        int emotionalState = selectOption("Emotional State", "Positive", "Neutral", "Negative", scanner);
-        int workloadResponsibilities = selectOption("Workload Responsibilities", "Low", "Moderate", "High", scanner);
-        int environmentalFactors = selectOption("Environmental Factors", "Favorable", "Neutral", "Unfavorable", scanner);
-        int personalFactors = selectOption("Personal Factors", "Positive", "Neutral", "Negative", scanner);
+        int physicalSymptoms = selectOption("Physical Symptoms", scanner, "None", "Mild", "Moderate", "Severe");
+        int cognitiveFunction = selectOption("Cognitive Function", scanner, "Normal", "Slight impairment", "Moderate impairment", "Significant impairment");
+        int emotionalState = selectOption("Emotional State", scanner, "Positive", "Neutral", "Negative");
+        int workloadResponsibilities = selectOption("Workload Responsibilities", scanner, "Low", "Moderate", "High");
+        int environmentalFactors = selectOption("Environmental Factors", scanner, "Favorable", "Neutral", "Unfavorable");
+        int personalFactors = selectOption("Personal Factors", scanner, "Positive", "Neutral", "Negative");
 
         scanner.close();
         
@@ -33,7 +33,7 @@ public class FitForDutyApp {
         
     }
     
-    private static int selectOption(String factor, String... options) {
+    private static int selectOption(String factor, Scanner scanner, String... options) {
     Scanner scanner = new Scanner(System.in);
     int selectedOption;
 
