@@ -25,6 +25,7 @@ public class FitForDutyApp {
         
         // Personal Factors
         int personalFactors = selectOption("Personal Factors", "Positive", "Neutral", "Negative", scanner);
+        scanner.close();
         
         // Calculate fatigue and stress
         int fatigue = calculateFatigue(physicalSymptoms, cognitiveFunction, workloadResponsibilities);
@@ -32,17 +33,18 @@ public class FitForDutyApp {
         
         // Determine if user is fit for duty
         boolean fitForDuty = isFitForDuty(fatigue, stress);
+
+        if (fitForDuty) {
+            System.out.println("You are fit for duty.");
+        } else {
+            System.out.println("You are not fit for duty. Take appropriate measures before resuming work.");
+        }
         
-        // Render appropriate advice
-        renderAdvice(fitForDuty);
-        
-        // Close the scanner
-        scanner.close();
     }
     
     private static int selectOption(String factor, String... options) {
         Scanner scanner = new Scanner(System.in);
-        int option;
+        int selectedOption;
         System.out.println("\n" + factor + ":");
         for (int i = 0; i < options.length; i++) {
             System.out.println((i + 1) + ". " + options[i]);
