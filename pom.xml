@@ -154,7 +154,7 @@
         </plugins>
     </build>
 
-    <!-- ... 
+    <!-- ... -->
 
     <profiles>
         <profile>
@@ -166,8 +166,8 @@
            
         </profile>
     </profiles>
-	-->
-    <!-- ... 
+	
+    <!-- ... -->
 
     <reporting>
         <plugins>
@@ -178,7 +178,7 @@
         </plugins>
 		    </reporting>
 	
--->
+
     <!-- ... -->
 
 </project>
