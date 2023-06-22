@@ -34,7 +34,7 @@ public class FitForDutyApp {
     }
     
     private static int selectOption(String factor, Scanner scanner, String... options) {
-    Scanner scanner = new Scanner(System.in);
+    
     int selectedOption;
 
     System.out.println(factor + ":");
