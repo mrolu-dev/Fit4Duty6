@@ -43,28 +43,28 @@ public class FitForDutyApp {
     }
     
     private static int selectOption(String factor, String... options) {
-        Scanner scanner = new Scanner(System.in);
-        int selectedOption;
-        System.out.println("\n" + factor + ":");
-        for (int i = 0; i < options.length; i++) {
-            System.out.println((i + 1) + ". " + options[i]);
-        }
-        System.out.print("Enter your choice (1-" + options.length + "): ");
-        
-        while (true) {
-            if (scanner.hasNextInt()) {
-                option = scanner.nextInt();
-                if (option >= 1 && option <= options.length) {
-                    break;
-                }
-            }
-            System.out.print("Invalid input. Please enter a number between 1 and " + options.length + ": ");
-            scanner.nextLine(); // Clear the input buffer
-        }
-        
-        scanner.nextLine(); // Clear the input buffer
-        return option;
+    Scanner scanner = new Scanner(System.in);
+    int selectedOption;
+
+    System.out.println(factor + ":");
+    for (int i = 0; i < options.length; i++) {
+        System.out.println((i + 1) + ". " + options[i]);
     }
+
+    do {
+        System.out.print("Enter your choice (1-" + options.length + "): ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Invalid input. Please enter a valid choice.");
+            System.out.print("Enter your choice (1-" + options.length + "): ");
+            scanner.next();
+        }
+        selectedOption = scanner.nextInt();
+    } while (selectedOption < 1 || selectedOption > options.length);
+
+    scanner.nextLine(); // Consume the newline character
+
+    return selectedOption - 1;
+}
     
     private static int calculateFatigue(int physicalSymptoms, int cognitiveFunction, int workloadResponsibilities) {
         return physicalSymptoms + cognitiveFunction + workloadResponsibilities;
