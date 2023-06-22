@@ -111,7 +111,7 @@
 	</distributionManagement>
 
     <build>
-	<finalName>fit4Duty</finalName>
+	<finalName>fit4duty</finalName>
         <plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -129,7 +129,7 @@
 			<configuration>
 				<scanIntervalSeconds>10</scanIntervalSeconds>
 				<webApp>
-					<contextPath>/fit4Duty</contextPath>
+					<contextPath>/fit4duty</contextPath>
 				</webApp>
 			</configuration>
 		</plugin>
